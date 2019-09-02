@@ -10,6 +10,7 @@
 	font-family: "bookman old style";
 	font-size: 14px;
 	letter-spacing: 1px;
+	z-index: 222;
 }
 
 .content {
@@ -20,7 +21,6 @@
 
 #poemTable {
 	width: 880px;
-	
 	padding: 10px;
 	font-family: "楷体";
 	font-size: 24px;
@@ -29,3 +29,20 @@
 th{
 	height: 50px;
 }
+
+#poemContent{
+	position: relative;
+	z-index: 222;
+}
+#iframeBackground{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 111;
+}
+
+#iframePlane{
+	position: relative;
+	z-index: 333;
+}
+
