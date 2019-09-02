@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 WebGL粒子爆炸动画DEMO演示</title>
+  
+  
+      <!-- <link rel="stylesheet" href="css/style.css"> -->
+	<script type="text/javascript">
+	
+	</script>
+  
+</head>
+
+<body >
+  <div id="div1" style="position: relative;top: 0px; z-index: 111;">
+  	<canvas id="c" width="600" style="position: relative; z-index: 150;"></canvas>
+  </div>
+
+
+<script id="shader-fs" type="x-shader/x-fragment">
+				#ifdef GL_ES
+				  precision highp float;
+				  #endif
+    		void main(void) {
+    		 gl_FragColor = vec4(0.2, 0.3, 0.4, 1.0);
+    		}
+		</script>
+
+  <script id="shader-vs" type="x-shader/x-vertex">
+    	attribute vec3 vertexPosition;
+
+  	uniform mat4 modelViewMatrix;
+  	uniform mat4 perspectiveMatrix;
+
+   	void main(void) {
+  		gl_Position = perspectiveMatrix * modelViewMatrix * vec4(  vertexPosition, 0.5);
+  	}
+  </script>
+
+    <script src="js/particle.js"></script>
+	
+
+</body>
+</html>
