@@ -46,3 +46,10 @@ th{
 	z-index: 333;
 }
 
+#videos{
+	position: absolute;
+	top: 0px;
+	visibility: hidden;
+	z-index: 110;
+}
+
