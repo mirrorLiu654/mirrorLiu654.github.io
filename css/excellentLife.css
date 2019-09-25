@@ -1,0 +1,54 @@
+#footer {
+	height: 40px;
+	line-height: 40px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background: #333;
+	color: #fff;
+	font-family: "bookman old style";
+	font-size: 14px;
+	letter-spacing: 1px;
+	z-index: 222;
+}
+
+.content {
+	height: 1800px;
+	width: 100%;
+	text-align: center;
+}
+
+#poemTable {
+	width: 880px;
+	padding: 10px;
+	font-family: "楷体";
+	font-size: 24px;
+}
+th{
+	height: 50px;
+}
+
+#poemContent{
+	position: relative;
+	z-index: 222;
+}
+#iframeBackground{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 111;
+}
+
+#iframePlane{
+	position: relative;
+	z-index: 333;
+}
+
+#videos{
+	position: absolute;
+	top: 0px;
+	visibility: hidden;
+	z-index: 110;
+}
+
