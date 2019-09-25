@@ -3,72 +3,21 @@
 	<head>
 		<meta charset="utf-8">
 		<title>mirrorLiu的主页</title>
-		<link rel="stylesheet" type="text/css" href="css/githubWeb.css" />
-
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
 	</head>
 	<body>
-		<center>
-			<div id="poemContent">
-				<h1 style="color: white;">mirrorLiu654的主页</h1>
-				<table id="poemTable">
-					<tr style="color: limegreen;">
-						<th align="left">路漫漫其修远兮，吾将上下而求索。 </th>
-						<th align="right">--屈原《离骚》</th>
-					</tr>
-					<tr style="color: greenyellow;">
-						<th align="left">三更灯火五更鸡，正是男儿读书时。 </th>
-						<th align="right">-- 颜真卿《劝学诗》</th>
-					</tr>
-					<tr style="color: dodgerblue;">
-						<th align="left">咬定青山不放松，立根原在破岩中。 </th>
-						<th align="right">-- 郑燮《竹石》</th>
-					</tr>
-					<tr style="color: purple;">
-						<th align="left">黄沙百战穿金甲，不破楼兰终不还。 </th>
-						<th align="right">-- 王昌龄《从军行七首·其四》</th>
-					</tr>
-					<tr style="color: blue;">
-						<th align="left">长风破浪会有时，直挂云帆济沧海。 </th>
-						<th align="right">-- 李白《行路难·其一》</th>
-					</tr>
-					<tr style="color: red;">
-						<th align="left">大鹏一日同风起，扶摇直上九万里。 </th>
-						<th align="right">--李白《上李邕》</th>
-					</tr>
+		<div id="aa">
+			<center>
+				<h1>mirrorLiu的主页</h1>
+				<table id="indexTable">
+					<tr><th><a href="introduction.html">自我简介</a></th></tr>
+					<tr><th><a href="music.html">好听歌曲</a></th></tr>
+					<tr><th><a href="video.html">精彩视频</a></th></tr>
+					<tr><th><a href="excellentLife.html">人生漫漫</a></th></tr>
 				</table>
-			</div>
-			<div id="videos">
-				<video src="../../../music/将军令-吴克群.weba" type="video/webm" controls autoplay style="visibility: hidden;width: 0px;height: 0px;"></video>
-				<video src="../../../music/一如年少模样-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-				<video src="../../../music/数人玩就是这个调调-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-				<video src="../../../music/左手指月-萨顶顶.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-				<video src="../../../music/假行僧-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-				<video src="../../../music/乌兰巴托的夜-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-			</div>
-			<script type="text/javascript">
-				var videos = document.getElementsByTagName("video");
-				for (var i = 0; i < videos.length; i++) {
-					for (var i = 0; i < videos.length; i++) {
-						console.log("videos " + i + "  SRC:" + videos[i].currentSrc);
-						videos[i].addEventListener('ended', function() {
-							// nextSibling 属性返回指定节点之后紧跟的节点，在相同的树层级中。
-							var nextAudio = this.nextSibling.nextSibling;
-							nextAudio.play();
-						}, false);
-					}
-				}
-			</script>
 
-			<br />
-			<script type="text/javascript">
-				alert('模型文件比较大，请点击确定按钮并耐心等待模型加载...');
-			</script>
-			<iframe id="iframeBackground" src="particle.html" width="100%" height="100%" border="0" scrolling="no" frameborder="0"></iframe>
-			<iframe id="iframePlane" src="model_show.html" width="600" height="400" border="0" scrolling="no" frameborder="0"></iframe>
-			<div id="footer">Copy Rights © 0-10000 liuyuqing, Inc. All rights reserved. </div>
-
-
-		</center>
-
+			</center>
+		</div>
+		<div id="footer">Copy Rights © 0-10000 liuyuqing, Inc. All rights reserved. </div>
 	</body>
 </html>

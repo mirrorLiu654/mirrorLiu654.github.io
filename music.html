@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>好听歌曲</title>
+		<link rel="stylesheet" type="text/css" href="css/music.css" />
+
+		<script type="text/javascript">
+			var musics = document.getElementsByTagName("video");
+			function musicPlay(musicNum) {
+				for (var i = 0; i < musics.length; i++) {
+					musics[i].pause();
+					musics[i].style.cssText = "visibility: hidden;width: 0px;height: 0px;";
+				}
+				var choosenMusic = musics[musicNum];
+				choosenMusic.play();
+				choosenMusic.style.cssText = "visibility:visible;width: 300px;height: 20px;";
+				
+				musics[musicNum].addEventListener('ended', function() {	//这首播放完了之后播放下一首
+					musicPlay(musicNum+1)
+				}, false);
+			}
+		</script>
+	</head>
+	<body>
+		<center>
+			<h1>好听的歌曲，等你来欣赏</h1>
+			<div id="video">
+				<table id="musicTable">
+					<tr>
+						<th><a href="#0" onclick="musicPlay(0)">将军令-吴克群</a>
+							<video id="music0" src="music/将军令-吴克群.weba" type="video/webm" controls style="visibility:hidden;width: 0px;height: 0px;"></video>
+						</th>
+					</tr>
+					<tr>
+						<th><a href="#1" onclick="musicPlay(1)">一如年少模样-谭维维</a><video id="music1" src="music/一如年少模样-谭维维.weba" type="video/webm"
+							 controls autoplay  style="visibility: hidden;width: 0px;height: 0px;"></video>
+						</th>
+					</tr>
+					<tr>
+						<th><a href="#2" onclick="musicPlay(2)">数人玩就是这个调调-谭维维</a>
+							<video id="music2" src="music/数人玩就是这个调调-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
+						</th>
+					</tr>
+					<tr>
+						<th><a href="#3" onclick="musicPlay(3)">左手指月-萨顶顶</a>
+							<video id="music3" src="music/左手指月-萨顶顶.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
+						</th>
+					</tr>
+					<tr>
+						<th><a href="#4" onclick="musicPlay(4)">假行僧-谭维维</a>
+							<video id="music4" src="music/假行僧-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
+						</th>
+					</tr>
+					<tr>
+						<th><a href="#5" onclick="musicPlay(5)">乌兰巴托的夜-谭维维</a>
+							<video id="music5" src="music/乌兰巴托的夜-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
+						</th>
+					</tr>
+				</table>
+
+			</div>
+
+		</center>
+		<div id="footer">Copy Rights © 0-10000 liuyuqing, Inc. All rights reserved. </div>
+	</body>
+</html>
