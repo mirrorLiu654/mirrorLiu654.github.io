@@ -7,6 +7,7 @@
 
 		<script type="text/javascript">
 			var musics = document.getElementsByTagName("video");
+
 			function musicPlay(musicNum) {
 				for (var i = 0; i < musics.length; i++) {
 					musics[i].pause();
@@ -14,10 +15,10 @@
 				}
 				var choosenMusic = musics[musicNum];
 				choosenMusic.play();
-				choosenMusic.style.cssText = "visibility:visible;width: 300px;height: 20px;";
-				
-				musics[musicNum].addEventListener('ended', function() {	//这首播放完了之后播放下一首
-					musicPlay(musicNum+1)
+				choosenMusic.style.cssText = "visibility:visible;width: 300px;height: 30px;";
+
+				musics[musicNum].addEventListener('ended', function() { //这首播放完了之后播放下一首
+					musicPlay(musicNum + 1)
 				}, false);
 			}
 		</script>
@@ -27,36 +28,66 @@
 			<h1>好听的歌曲，等你来欣赏</h1>
 			<div id="video">
 				<table id="musicTable">
-					<tr>
-						<th><a href="#0" onclick="musicPlay(0)">将军令-吴克群</a>
-							<video id="music0" src="music/将军令-吴克群.weba" type="video/webm" controls style="visibility:hidden;width: 0px;height: 0px;"></video>
-						</th>
-					</tr>
-					<tr>
-						<th><a href="#1" onclick="musicPlay(1)">一如年少模样-谭维维</a><video id="music1" src="music/一如年少模样-谭维维.weba" type="video/webm"
-							 controls autoplay  style="visibility: hidden;width: 0px;height: 0px;"></video>
-						</th>
-					</tr>
-					<tr>
-						<th><a href="#2" onclick="musicPlay(2)">数人玩就是这个调调-谭维维</a>
-							<video id="music2" src="music/数人玩就是这个调调-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-						</th>
-					</tr>
-					<tr>
-						<th><a href="#3" onclick="musicPlay(3)">左手指月-萨顶顶</a>
-							<video id="music3" src="music/左手指月-萨顶顶.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-						</th>
-					</tr>
-					<tr>
-						<th><a href="#4" onclick="musicPlay(4)">假行僧-谭维维</a>
-							<video id="music4" src="music/假行僧-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-						</th>
-					</tr>
-					<tr>
-						<th><a href="#5" onclick="musicPlay(5)">乌兰巴托的夜-谭维维</a>
-							<video id="music5" src="music/乌兰巴托的夜-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video>
-						</th>
-					</tr>
+<tr><th><a href="#0" onclick="musicPlay(0)">一如年少模样-谭维维</a><video id="music0" src="music/一如年少模样-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#1" onclick="musicPlay(1)">乌兰巴托的夜-谭维维</a><video id="music1" src="music/乌兰巴托的夜-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#2" onclick="musicPlay(2)">假行僧-谭维维</a><video id="music2" src="music/假行僧-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#3" onclick="musicPlay(3)">光能使者变身合集</a><video id="music3" src="music/光能使者变身合集.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#4" onclick="musicPlay(4)">天籁之爱-旺姆-容中尔甲</a><video id="music4" src="music/天籁之爱-旺姆-容中尔甲.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#5" onclick="musicPlay(5)">将军令-吴克群</a><video id="music5" src="music/将军令-吴克群.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#6" onclick="musicPlay(6)">左手指月-萨顶顶</a><video id="music6" src="music/左手指月-萨顶顶.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#7" onclick="musicPlay(7)">怨苍天变了心-谭晶</a><video id="music7" src="music/怨苍天变了心-谭晶.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#8" onclick="musicPlay(8)">数人玩就是这个调调-谭维维</a><video id="music8" src="music/数人玩就是这个调调-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#9" onclick="musicPlay(9)">轮回-谭维维</a><video id="music9" src="music/轮回-谭维维.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#10" onclick="musicPlay(10)">雨花石-李雨儿-石头</a><video id="music10" src="music/雨花石-李雨儿-石头.weba" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#11" onclick="musicPlay(11)">S.H.E - 不想长大</a><video id="music11" src="music/S.H.E - 不想长大.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#12" onclick="musicPlay(12)">任贤齐 - 伤心太平洋</a><video id="music12" src="music/任贤齐 - 伤心太平洋.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#13" onclick="musicPlay(13)">任贤齐 - 天涯</a><video id="music13" src="music/任贤齐 - 天涯.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#14" onclick="musicPlay(14)">任贤齐 - 风云决</a><video id="music14" src="music/任贤齐 - 风云决.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#15" onclick="musicPlay(15)">儿童歌曲 - 天上掉下个猪八戒</a><video id="music15" src="music/儿童歌曲 - 天上掉下个猪八戒.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#16" onclick="musicPlay(16)">刀郎 - 永远的兄弟</a><video id="music16" src="music/刀郎 - 永远的兄弟.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#17" onclick="musicPlay(17)">初音未来 - 甩葱歌(初音未来主题曲)</a><video id="music17" src="music/初音未来 - 甩葱歌(初音未来主题曲).mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#18" onclick="musicPlay(18)">周华健 - 朋友</a><video id="music18" src="music/周华健 - 朋友.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#19" onclick="musicPlay(19)">周华健、成龙 - 少年强</a><video id="music19" src="music/周华健、成龙 - 少年强.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#20" onclick="musicPlay(20)">孙悦 - 我心飞翔</a><video id="music20" src="music/孙悦 - 我心飞翔.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#21" onclick="musicPlay(21)">孙悦 - 祝你平安</a><video id="music21" src="music/孙悦 - 祝你平安.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#22" onclick="musicPlay(22)">孙露 - 再度重相逢</a><video id="music22" src="music/孙露 - 再度重相逢.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#23" onclick="musicPlay(23)">孙露 - 别再说</a><video id="music23" src="music/孙露 - 别再说.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#24" onclick="musicPlay(24)">孙露 - 请跟我来</a><video id="music24" src="music/孙露 - 请跟我来.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#25" onclick="musicPlay(25)">孙露 - 遗憾</a><video id="music25" src="music/孙露 - 遗憾.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#26" onclick="musicPlay(26)">孙露 - 黄玫瑰</a><video id="music26" src="music/孙露 - 黄玫瑰.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#27" onclick="musicPlay(27)">孙露 -是否</a><video id="music27" src="music/孙露 -是否.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#28" onclick="musicPlay(28)">孙露 -酒干倘卖无</a><video id="music28" src="music/孙露 -酒干倘卖无.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#29" onclick="musicPlay(29)">孙露 和汇慧 - 爱</a><video id="music29" src="music/孙露 和汇慧 - 爱.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#30" onclick="musicPlay(30)">张碧晨 - 爱你的宿命(Live)</a><video id="music30" src="music/张碧晨 - 爱你的宿命(Live).mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#31" onclick="musicPlay(31)">懂你-满文军</a><video id="music31" src="music/懂你-满文军.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#32" onclick="musicPlay(32)">成龙 - 油菜花(电影《大兵小将》主题曲)</a><video id="music32" src="music/成龙 - 油菜花(电影《大兵小将》主题曲).mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#33" onclick="musicPlay(33)">成龙 - 神话</a><video id="music33" src="music/成龙 - 神话.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#34" onclick="musicPlay(34)">成龙 - 醉拳 - 国语 kq2009</a><video id="music34" src="music/成龙 - 醉拳 - 国语 kq2009.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#35" onclick="musicPlay(35)">挪威的森林-孙露</a><video id="music35" src="music/挪威的森林-孙露.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#36" onclick="musicPlay(36)">星星点灯</a><video id="music36" src="music/星星点灯.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#37" onclick="musicPlay(37)">杨洪基 - 滚滚长江东逝水</a><video id="music37" src="music/杨洪基 - 滚滚长江东逝水.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#38" onclick="musicPlay(38)">杨采钰 - 哪吒传奇</a><video id="music38" src="music/杨采钰 - 哪吒传奇.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#39" onclick="musicPlay(39)">杨钰莹 - 心雨</a><video id="music39" src="music/杨钰莹 - 心雨.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#40" onclick="musicPlay(40)">杨钰莹 - 梦里水乡</a><video id="music40" src="music/杨钰莹 - 梦里水乡.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#41" onclick="musicPlay(41)">水木年华 - 完美世界</a><video id="music41" src="music/水木年华 - 完美世界.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#42" onclick="musicPlay(42)">海鸣威 - 老人与海</a><video id="music42" src="music/海鸣威 - 老人与海.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#43" onclick="musicPlay(43)">温亮亮 - 相信我们会创造奇迹</a><video id="music43" src="music/温亮亮 - 相信我们会创造奇迹.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#44" onclick="musicPlay(44)">田震-风雨彩虹铿锵玫瑰</a><video id="music44" src="music/田震-风雨彩虹铿锵玫瑰.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#45" onclick="musicPlay(45)">罗大佑 - 童年</a><video id="music45" src="music/罗大佑 - 童年.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#46" onclick="musicPlay(46)">荷塘月色-凤凰传奇</a><video id="music46" src="music/荷塘月色-凤凰传奇.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#47" onclick="musicPlay(47)">萧敬腾 - 王子的新衣</a><video id="music47" src="music/萧敬腾 - 王子的新衣.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#48" onclick="musicPlay(48)">许嵩 - 庐州月</a><video id="music48" src="music/许嵩 - 庐州月.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#49" onclick="musicPlay(49)">许美静 - 阳光总在风雨后</a><video id="music49" src="music/许美静 - 阳光总在风雨后.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#50" onclick="musicPlay(50)">谭晶&陈奕迅-龙文</a><video id="music50" src="music/谭晶&陈奕迅-龙文.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#51" onclick="musicPlay(51)">费翔-故乡的云</a><video id="music51" src="music/费翔-故乡的云.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#52" onclick="musicPlay(52)">赵雷 - 我们的时光</a><video id="music52" src="music/赵雷 - 我们的时光.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#53" onclick="musicPlay(53)">赵雷 - 画</a><video id="music53" src="music/赵雷 - 画.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#54" onclick="musicPlay(54)">阚立文-无衣-(电视剧《我是特种兵之霹雳火》片尾主题曲)</a><video id="music54" src="music/阚立文-无衣-(电视剧《我是特种兵之霹雳火》片尾主题曲).mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#55" onclick="musicPlay(55)">陈俊华-故乡是北京</a><video id="music55" src="music/陈俊华-故乡是北京.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#56" onclick="musicPlay(56)">陈瑞 - 白狐 </a><video id="music56" src="music/陈瑞 - 白狐 .mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#57" onclick="musicPlay(57)">韩磊 - 走四方</a><video id="music57" src="music/韩磊 - 走四方.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+<tr><th><a href="#58" onclick="musicPlay(58)">爸爸妈妈听我说-儿童曲</a><video id="music58" src="music/爸爸妈妈听我说-儿童曲.mp3" type="video/webm" controls style="visibility: hidden;width: 0px;height: 0px;"></video></th></tr>  
+
 				</table>
 
 			</div>
